@@ -1,0 +1,31 @@
+GnuCOBOL 2.2.0          HELLO001.CBL         Tue Dec 27 00:13:16 2022  Page 0001
+
+LINE    PG/LN  A...B............................................................
+
+000001  000100 IDENTIFICATION DIVISION.
+000002  000200 PROGRAM-ID. HELLO001.
+000003  000300 PROCEDURE DIVISION.
+000004  000400 DISPLAY "Hello,World!".
+000005  000500 STOP RUN.
+warning: line not terminated by a newline
+GnuCOBOL 2.2.0          HELLO001.CBL         Tue Dec 27 00:13:16 2022  Page 0002
+
+NAME                           DEFINED                REFERENCES
+
+
+      No fields defined.
+
+GnuCOBOL 2.2.0          HELLO001.CBL         Tue Dec 27 00:13:16 2022  Page 0003
+
+LABEL                          DEFINED                REFERENCES
+
+E HELLO001                     4
+
+GnuCOBOL 2.2.0          HELLO001.CBL         Tue Dec 27 00:13:16 2022  Page 0004
+
+Error/Warning summary:
+
+HELLO001.CBL: 5: warning: line not terminated by a newline
+
+1 warning in compilation group
+0 errors in compilation group

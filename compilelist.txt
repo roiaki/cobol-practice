@@ -1,0 +1,61 @@
+GnuCOBOL 2.2.0          SAMPLE001.CBL        Tue Dec 27 10:11:22 2022  Page 0001
+
+LINE    PG/LN  A...B............................................................
+
+000001         IDENTIFICATION                   DIVISION.
+000002         PROGRAM-ID.                      SAMPLE001.
+000003        *
+000004         ENVIRONMENT                      DIVISION.
+000005        *
+000006         DATA                             DIVISION.
+000007         WORKING-STORAGE                  SECTION.
+000008         01 NUM01                         PIC 9(3) VALUE 0.
+000009         01 NUM02                         PIC 9(3).
+000010         01 NUM03                         PIC 9(3).
+000011         01 REMAINDER01                   PIC 9(3).
+000012         01 REMAINDER02                   PIC 9(3).
+000013         01 REMAINDER03                   PIC 9(3).
+000014
+000015         PROCEDURE DIVISION.
+000016
+000017         PERFORM VARYING NUM01 FROM 1 BY 1 UNTIL NUM01 = 101
+000018             DIVIDE 15 INTO NUM01 GIVING NUM02 REMAINDER REMAINDER01
+000019             DIVIDE  3 INTO NUM01 GIVING NUM02 REMAINDER REMAINDER02
+000020             DIVIDE  5 INTO NUM01 GIVING NUM02 REMAINDER REMAINDER03
+000021
+000022             IF REMAINDER01 = 0 THEN
+000023                 DISPLAY "FizzBuzz"
+000024             ELSE
+000025                 IF REMAINDER02 = 0 THEN
+000026                     DISPLAY "Fizz"
+000027                 ELSE
+000028                     IF REMAINDER03 = 0 THEN
+000029                         DISPLAY "Buzz"
+000030                     ELSE
+000031                         DISPLAY NUM01
+000032                     END-IF
+000033                 END-IF
+000034             END-IF
+000035
+000036         END-PERFORM.
+000037         STOP RUN.
+000038
+GnuCOBOL 2.2.0          SAMPLE001.CBL        Tue Dec 27 10:11:22 2022  Page 0002
+
+NAME                           DEFINED                REFERENCES
+
+NUM01                          8        17      18      19      20      31
+NUM02                          9        18      19      20
+NUM03                          10     not referenced
+REMAINDER01                    11       18      22
+REMAINDER02                    12       19      25
+REMAINDER03                    13       20      28
+
+GnuCOBOL 2.2.0          SAMPLE001.CBL        Tue Dec 27 10:11:22 2022  Page 0003
+
+LABEL                          DEFINED                REFERENCES
+
+E SAMPLE001                    17
+
+0 warnings in compilation group
+0 errors in compilation group
